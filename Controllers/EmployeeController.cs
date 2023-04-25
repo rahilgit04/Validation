@@ -35,6 +35,7 @@ namespace Validation.Controllers
 
 
         //Using merge modal
+        //for the purpose of latest 
         public IActionResult EmployeeList()
         {
             EmployeeDepartmentListViewModel emp = new EmployeeDepartmentListViewModel();

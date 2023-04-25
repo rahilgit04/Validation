@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3 border border-info p-4">
+            <div class="bg-dark border border-light rounded m-1 p-1"><h3 class="text-light text-center p-2">Validation Check</h3></div>
+            <form method="post" asp-action="Customer" id="myform">
+                <div class="form-group">
+                    <label>First Name<span class="text-danger">*</span> :</label>
+                    <input type="text" class="form-control"  name="FirstName" placeholder="Enter first name" id="firstName" />
+                    <span id="errorfName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Last Name :</label>
+                    <input type="text" class="form-control"  name="LastName" placeholder="Enter first name" id="lastName" />
+                    <span id="errorlName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Mobile No<span class="text-danger">*</span> :</label>
+                    <input type="text" class="form-control"  name="MobileNo" placeholder="Enter mobile number" id="mobileno" />
+                    <span id="errorMobile" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-sm btn-primary float-right mt-1" id="btnSubmit">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section scripts{ 
+    <script src="~/js/Validate.js"></script>
+}
+

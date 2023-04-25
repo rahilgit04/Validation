@@ -1,0 +1,36 @@
+﻿@model Validation.Models.ViewModel.EmployeeDepartmentListViewModel
+@{
+    ViewData["Title"] = "EmployeeList";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="text-center">
+                        <th>EmployeeId</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Gender</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    @foreach (var d in Model.employees)
+                    {
+                        <tr>
+                            <td>@d.EmployeeId</td>
+                            <td>@d.FirstName</td>
+                            <td>@d.LastName</td>
+                            <td>@d.Gender</td>
+                            <td>@d.Department.DepartmentName</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
